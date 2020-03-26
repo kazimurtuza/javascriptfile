@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+// var variable use 
+        function ab()
+        {
+            var a=30;
+            if(true)
+            {
+                a=50;
+                document.write("var a inside if = "+a+"<br>");
+            }
+     
+            document.write("var a outside if =  "+a+"<br>");
+            
+        }
+      
+
+      ab();
+
+
+
+      document.write("<br>");
+      document.write("<br>");
+
+
+// let variable use 
+      function uselet()
+      {
+          let b =20;
+          if(true)
+          {
+              let b=23+20;
+              document.write("let b inside if = "+b+"<br>");
+          }
+          document.write("let b inside if = "+b+"<br>");
+      }
+      uselet();
+
+
+
+      document.write("<br>");
+ document.write("<br>");
+
+// using late variable  loop
+let n=30;
+ for(let n=1;n<5;n++)
+ {
+     document.write("use let inside loop ="+ n + "<br>");
+ }
+ document.write("use let =" + n +"out side "+"<br>");
+
+ 
+ document.write("<br>");
+ document.write("<br>");
+
+//  using late variable  loop
+ var p=20;
+ for(var p=1;p<5;p++)
+ {
+     document.write("use var inside loop"+ p +"<br>");
+ }
+ document.write("use var outside loop"+ p +"<br>");
+
+
+//  use constant variable
+
+   
+   const u=40;
+//    u=60+4; not work 
+
+
+  var r=60;
+  r=60+5;
+
+
+ document.write("<br>"+"constent ="+r);
+ document.write("<br>"+"constent ="+u);
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//    declar array  start
+        var ar=["jim","mim","mahadi","don","red"];
+        document.write(ar + "<br>");
+        document.write(`my name is ${ar[1]} and i live in bangladesh my brother name is ${ar[2]}`);
+
+//    declar array end
+
+//    declar array of object start
+        let arob=[
+            {
+                name:"bangla",
+                class:20,
+                subject:"sce",
+            },
+            {
+                phone:"i phone",
+                price:20000,
+                sid:"sce00033",
+            }
+
+
+
+        ]
+
+        document.write("<br>"+"<br>"+"----"+arob[0].name+"----"+arob[1].phone+"----");
+
+//    declar array of object end
+
+
+
+
+//     insert value in a array
+          
+        var myar=[];
+        myar[0]="mim"
+        myar[1]="jim"
+        myar[4]="rad"
+        myar[1]="sad"
+
+        document.write("<br>"+myar);
+
+        var num =[1,9,3,7,"home",8,"jim",44,"bangla",20];
+
+
+
+        // -----for each way 1------------
+        document.write("<br>"+"<br>"+"<br>"+"<br>")
+
+
+        num .forEach(function(val,index,arr){
+            document.write("<br>"+`my information are ${val}`+`..  index position is ${index}`+`.. array a list are ${arr}`);
+        });
+
+         // -----for each way 1--end----------//
+
+
+
+        // -----for each way 2------------
+        document.write("<br>"+"<br>"+"<br>"+"<br>")
+
+        let gofun= function (a,b,c)
+        {
+            document.write("<br>"+"banglas"+a+" --index= "+b+"--all array ="+c);
+        }
+
+        num.forEach(gofun);
+
+         // -----for each way 2--end----------//
+    
+
+  
+    
+
+
+    </script>
+</body>
+</html>
