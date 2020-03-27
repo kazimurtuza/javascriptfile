@@ -51,9 +51,60 @@
   document.write(hobys[2]);
 
   document.write("<br> <br> <br>");
-  document.write(mother);
+  document.write(mother+"<br>");
 
-  // object name initialize  and  show end
+  // object name initialize  and show  end
+
+
+
+
+
+
+
+  ///////////////////////////////////  object method ////////////////////////////////////////////////
+  
+  // (1) keys  (2)values  (3) entries.    this all method creale an arry from an object so that we cane use them  in  [ for of loop, foreach() , filte(),map(),and reduce() method ] becouse thye all use  only in array , [we can't use foreach loop directly in object ].
+
+
+  let info={
+    name:"murtusa",
+    father:"baten",
+    mother:"morzina",
+    phone:"01792976019",
+    house:"gaibsandha",
+  }
+
+  // (1) [ Object.keys(obj) ] first  create Object all names arry  using keys method and  then show them   use array method
+
+  let allname=Object.keys(info);
+  
+  document.write("names ="+allname+"<br>");
+  console.log(allname);
+
+  
+
+  // (2) [ Object.values(obj) ] first  create Object all values arry  using values method and  then show them use array method
+
+ const allvalue=Object.values(info);
+
+
+ document.write("value ="+allvalue +"<br>");
+ console.log(allvalue);
+
+ allvalue.forEach((value,posi)=> document.write("inside loop ="+value+" index "+posi+"<br>"));
+
+ 
+  // (3) [ Object.entries(obj) ] it convert a object in to 2d array firt one is name array and second one is values array
+
+  let valandname= Object.entries(info);
+  console.log(valandname);
+  console.log(valandname[0][0],valandname[0][1]);
+
+
+  
+
+
+
 
    
   
