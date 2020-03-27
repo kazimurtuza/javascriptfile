@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    const person={
+      firstname:"kazi baten",
+      lastname:"murtuza",
+      hobys:["cricket","sports",'movies'],
+      familly:{
+        father:"baten",
+        mother:"morzina",
+        brother:"jim",
+      },
+      home:"gaibandha",
+      age:23,
+      mobile:"o1792975019",
+    }
+
+    
+    document.write(person.hobys + "<br>");
+
+    document.write(person.familly.father);
+
+
+    document.write("<br> <br> <br>");
+
+
+// usidg foreach loop
+  person.hobys.forEach((element,index)=>document.write(element+" index =" +index+"<br>" ));
+// usidg foreach loop end
+
+
+
+// object name initialize  and  show
+
+  const {firstname,lastname,hobys,familly:{mother}}=person;
+
+  
+  document.write("<br> <br> <br>");
+  document.write(firstname);
+
+  document.write("<br> <br> <br>");
+  document.write(hobys);
+  document.write("<br> <br> <br>");
+  document.write(hobys[2]);
+
+  document.write("<br> <br> <br>");
+  document.write(mother);
+
+  // object name initialize  and  show end
+
+   
+  
+
+
+ 
+
+    </script>
+    
+</body>
+</html>
