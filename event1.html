@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+  <!-- practise video link  [Introduction to JavaScript Event Listeners] -->
+
+   click vevent  <button id="btn" onclick=" work()">button</button> <br><br>
+
+   in link use click <a href="https://www.google.co.in/webhp?gws_rd=ssl" id="lickclick">google</a> <br><br>
+
+   input event <input way="text" oninput="useinput()"  id="input"> <br><br>
+
+
+   change event <input way="text" onchange="changev()" id="change"> <br><br>
+
+   blur event   <input way="text" id="blurid"> <br><br> <!-- onblur=" callblur()"  -->
+
+   
+
+
+
+
+
+
+
+
+    <script>
+
+        // syntex event//
+
+        // objec.addEventLitener('event type',function)
+
+        //  use 3 way to use events
+
+
+    // way 1 use onclick function here
+        function work(e)
+        {
+          
+            console.log("bangladesh")
+        };
+
+    // way 2 use general function here
+
+        let btn=document.getElementById("btn");
+
+        btn.addEventListener('click',works2)
+
+        function works2(ev)
+        {
+            console.log(ev.way)
+            console.log(ev.target)
+           
+        };
+
+    // way 3 use arrow function here
+
+        btn.addEventListener('click',ev=>alert("use arrow function here"));
+
+
+      
+      // link click use here---------------------------------------------------------------
+
+      let linkclick=document.getElementById("lickclick");
+
+         linkclick.addEventListener('click',e=>{
+             e.preventDefault()
+             document.write("link use here")
+
+         })
+
+        //  let testinput=document.getElementById("input");
+        //  testinput.addEventListener('input',ev=>console.log(ev.target.value));
+
+        function useinput()
+        {
+            var vl=document.getElementById("input");
+            console.log(vl.value);
+        }
+
+
+
+        // change event use here
+
+        function changev()
+        {
+            let getvel=document.getElementById("change");
+
+            console.log(getvel.value)
+        }
+        
+        //blur event use here
+
+        let tstblur=document.getElementById("blurid");
+
+        tstblur.addEventListener('blur',ev=>{console.log(ev.target.value), console.log(ev.target)})
+
+      
+      //
+      Domconte
+
+
+      
+
+
+
+
+    </script>
+
+ 
+    
+</body>
+</html>
