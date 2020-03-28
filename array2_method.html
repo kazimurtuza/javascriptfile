@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// --------------array method-----------------------
+ /*   (1)push,
+      (2)pop,
+      (3)filter,
+      (4)map,
+      (5)sort,
+      (5)reduce,
+    */
+  let newfile=[];
+
+  let age=[3,55,7,44,66,1,3,44,22,12,88,22,18,21,51,];
+
+  var student=["murtuza","class-12","roll-55","bangladesh"];
+
+  var stuadmission=[
+      {   name:"jim",
+          father:"baten",
+          mother:"morjina",
+          house:"gaibandha",
+          age:20,
+          start:1960,
+          end:20012,
+          country:"bangladesh",
+
+      },
+      {
+          password:"123456",
+          gender:"male",
+          height:"5.9",
+          age:11,
+          start:1950,
+          end:2010,
+          country:"indea",
+      },
+
+      {   name:"radiaas",
+          father:"dsoijsss",
+          mother:"ldsjf",
+          house:"dhaka",
+          age:50,
+          start:2000,
+          end:2009,
+          country:"bangladesh",
+      },
+      {   name:"fahad",
+          father:"ppe",
+          mother:"jara",
+          house:"sylet",
+          age:54,
+          start:1971,
+          end:2006,
+          country:"cina",
+      },
+      {   name:"sadia",
+          father:"ghsss",
+          mother:"sara",
+          house:"gaibandha",
+          age:23,
+          start:1980,
+          end:2020,
+          country:"bangladesh",
+      },
+
+  ];
+
+  // (1) pop (delete method )-----------------------------------------------------------
+
+    console.log(student)
+
+    student.pop();
+    console.log(student)
+
+
+
+
+  // (2) push method (insert)-------------------------------------------------------------
+  document.write("<br>"+"<h1>push method</h1> "+"<br><br>");
+
+   student.push("murtuza");
+   console.log(student);
+
+
+   stuadmission.forEach(value=>{
+       if(value.age>=50)
+       {
+        //    newfile.push(value.name,value.father); simple push
+           newfile.push({name:value.name,father:value.father}); //bojectly push in a array
+           
+       }
+   
+   });
+
+   console.log(newfile),
+
+
+
+
+
+
+//    foreach loop use in array----------------------------------------------------------------
+document.write("<br>"+"<h1>foreach loop</h1>"+"<br><br>");
+
+
+  student.forEach(value=>document.write(value+"<br>"));
+
+  document.write("<br><br>");
+
+  stuadmission.forEach(value=>document.write(value.name+"<br>"));
+
+
+
+// (3)filter,---------------------------------------------------------------------------------
+document.write("<br>"+"<h1>filter method</h1>"+"<br><br>");
+
+document.write("befor filter "+age+"<br>");
+
+//filter 1
+const agefilter=age.filter(function(ageab){
+    if(ageab >=20)
+    {
+        return true;
+    }
+})
+document.write("after filter "+agefilter+"<br>");
+
+
+
+//filter 2
+ const unadult=age.filter(under=> under<=18);
+
+ document.write("after filter unadult"+unadult+"<br>");
+
+
+
+ // filter from object array part1 
+ let aryobj=stuadmission.filter(search=> search.age<30);
+ document.write(aryobj);
+ console.log(aryobj);
+
+ // filter from object array part 2
+let hstr=stuadmission.filter(info=>(info.start>1960 && info.end<=2010));
+console.log(hstr);
+
+ // filter from object array part 3
+let exprinceage=stuadmission.filter(info=>(info.end - info.start>=50 ));
+console.log(exprinceage);
+
+   
+   let coun=stuadmission.filter(getinfo=>getinfo.country==="indea");
+   console.log(coun);
+
+ // (4)map-------------------------------------------------------------------------------
+//  it create an arry 
+
+ let testmap=stuadmission.map(vel=>vel.name);
+         
+                        
+ let testmap2=stuadmission.map(vel=>`woner name ${vel.name} range of stay [${vel.start} -  ${vel.end}] exprience ${vel.end-vel.start} years`);
+document.write("<br>"+"using mape ="+ testmap2);
+console.log(testmap2);
+
+let testmap4=stuadmission.map(vel=> vel.age)
+                         .map(vel=>  vel+2); //   here first map create an arry of age then second map all  add 2 in all velue
+
+                         console.log(testmap4)
+
+// (4)sort-------------------------------------------------------------------------    
+
+// sort 1
+ let sorted=stuadmission.sort(function(a,b){
+     if(b.start<a.start)
+     {
+         return 1;
+     }
+     else{
+         return -1;
+     }
+ })
+ console.log(sorted);
+ //sort 2
+ let sort2=stuadmission.sort((a,b)=>(a.start>b.start ? 1 : -1));
+
+ console.log(sort2);
+
+ //sort 3
+
+ let getsort3=age.sort();
+ let getsort4=age.sort((a,b)=>a-b);
+
+
+   console.log(getsort3);
+   console.log(getsort4);
+
+
+  // (4)reduce-------------------------------------------------------------------------  
+
+  var sallary=[444,8766,248,99,1,222,34,567] ;
+
+  let slasum=sallary.reduce((total,val)=>total+val,0);//here total inisialize zero and val show as loop
+   console.log(slasum);
+
+
+
+// filter map sort reduce all array method use semultanious ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+var employ=[
+
+    {name:"murtuza ",
+    id:7,
+    sallary:40000,
+    exprience:"2 years",
+    age:23,
+    country:"bangladesh",
+    },
+
+    {
+    name:"mahadi ",
+    id:12,
+    sallary:290000,
+    exprience:"1 year",
+    age:30,
+    country:"bangladesh",
+    },
+
+    {name:"jim ",
+    id:23,
+    sallary:35000,
+    exprience:"3 years",
+    age:26,
+    country:"indea",
+    },
+
+    {name:"rad",
+    id:125,
+    sallary:20000,
+    exprience:"5 years",
+    age:30,
+    country:"africa",
+    },
+    {name:"arsad",
+    id:12578,
+    sallary:25500,
+    exprience:"5 years",
+    age:33,
+    country:"bangladesh",
+    },
+
+]
+
+var allsallary=employ.filter(value=>value.country==='bangladesh').map(val=>val.sallary+200).sort().reduce((total,val)=>total+val,0);
+
+console.log(allsallary);
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
