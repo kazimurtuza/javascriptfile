@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- handleEvent method use  -->
+
+    <button id="btn">using handleEvent multiple event  in one  </button>
+
+
+    <script>
+       
+       let obj1={
+           addeventhere:function()
+           {
+               document.getElementById("btn").addEventListener('click',this)
+               document.getElementById("btn").addEventListener('focus',this)
+               document.getElementById("btn").addEventListener('blur',this)
+               
+           },
+
+           handleEvent:function(ev)
+           {
+               switch(ev.type)
+               {
+                   case'click':
+                   console.log(ev.type)
+                   break;
+                   case'focus':
+                   console.log(ev.type)
+                   break;
+                   case'blur':
+                   console.log(ev.type)
+                   break;
+               }
+           }
+       }
+    
+       obj1.addeventhere();
+
+    </script>
+
+
+    <script>
+
+
+
+    </script>
+</body>
+</html>
