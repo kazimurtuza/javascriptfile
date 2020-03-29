@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    //  (1)  globali use this keyword
+
+        this.name="bangladesh";
+        this.house="gaibandha";
+
+        console.log(window.name);
+        console.log(window.house);
+
+        //  (1)  this keyword  use in object
+
+        var obj1={
+            varsity:"bubt",
+            varsity1:"oxford",
+           shows()           //  (1)  here no ned to write function 
+            {
+                console.log(this.varsity);
+                return this.varsity;
+            },
+            place:function()
+            {
+                console.log(this.varsity1);
+                console.log(this.shows());
+            }
+
+        }
+        obj1.place();
+      
+       
+
+
+
+
+    </script>
+</body>
+</html>
