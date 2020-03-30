@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-----------------------call() method use in a function-------------------->
+    <!-----------------------apply() method use in a function-------------------->
+    <!-----------------------bind() method use in a function-------------------->
+
+    <script>
+
+// -----------------------call() method use in a function-------------------->
+
+        let persion={
+
+            school:"ahmmaduddin",
+            fees:"500 tk",
+
+            name:function(a,b,c){
+                return c+"<br><br>"+"this ="+this+"<br>"+"this.firstnaem="+this.firstname+"<br>"+" a= "+a +"<br>"+" b="+b+"<br>"+"this.school="+this.school+"<br><br><br>";
+            }
+        }
+      //   without call() function use
+      document.write(persion.name({firstname:"kazi",lastnam:"noman"},"indea","pakisthan","coll() method not use"));
+
+     //   with call() function use
+      document.write(persion.name.call({firstname:"kazi",lastnam:"noman"},"indea","pakisthan","coll()method use"));
+
+    //   ------------------end-----call() method use in a function-------------------->
+
+
+
+
+    //   ------------------end-----apply() method use in a function-------------------->
+
+                //   call() and apply() methid are equally same but only different there 
+                //   apply() method send argument as a arry style 
+
+    let useapply=function(a,b,c)
+    {
+        return c+"<br><br>"+this.firstname+"<br>"+this.lastname+"<br>"+a+"<br>"+b+"<br>";
+    }
+
+    let obj1={
+        firstname:"masrafibin",
+        lastname:"murtuza",
+        
+    }
+
+   document.write(useapply.apply(obj1,["player in","bangladesh","apply() method use here"]));
+    
+    
+    
+    //   ------------------end-----apply() method use in a function-------------------->
+
+
+    
+
+    </script>
+    
+</body>
+
+</html>

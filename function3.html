@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!--   closure  function  -->
+    <!-- reference [ Closure in JavaScript (Hindi)] -->
+
+    <!-- a closure is a function having access to the parent scope.it preserve the data from outside,
+    OR
+    a closure  is an inner function that access to the outer (enclosing) function's variables -->
+
+    <!-- every closure have three scopes:-
+    1 local scope (own scope)
+    2 outer function scope 
+    3 global scope -->
+
+
+    <script>
+          
+        //   1 local scope (own scope)
+
+          var me="murtuza";     //   parent scope
+
+          var classa="seven";
+
+          var obj1={
+            name:"bangladesh",
+            home:"dhaka",
+          }
+
+
+          function getvel(a)
+          {
+             
+              console.log(me+"    "+a+"  "+classa+"  "+obj1.home);
+          }
+
+          getvel("school");
+
+
+        //   2    outer function scope 
+
+        var global="my name is khan";
+
+        function outerfun()
+        {
+            var k="k this is outer function"
+            
+            function innerfun()
+            {
+                var j="this is inner function";
+               document.write(j+"<br>"+k);
+            }
+            innerfun()
+            document.write(k);
+
+        }
+
+        outerfun();
+
+
+
+        
+
+    </script>
+    
+</body>
+</html>
