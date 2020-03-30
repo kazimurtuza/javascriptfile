@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <!--                (1) construct function  
+       function constructor: let x=new functionname("vbalue2","value3") 
+
+       instant object create using constructor function     -->
+
+
+
+    <script>
+
+        function getvalue(a,b)
+        {
+            this.firstname=a;
+            this.lasname=b;
+            this.total=function()
+            {
+                return 5+this.lasname;
+            }
+           
+          
+        }
+    let samsung= new getvalue("samsung",34);
+    let nokia= new getvalue("nokia",45);
+    console.log(samsung.firstname);
+    console.log(samsung.total());
+
+
+    console.log(nokia.firstname);
+    console.log("taka: "+nokia.total());
+
+
+
+   // consttructior function
+
+    let get=function(ar)
+    {
+        this.aru=ar;
+        this.add=function()
+        {
+            var a=0
+             this.aru.forEach((val)=>{a=a+val})
+            return a;
+        },
+
+        this.mul=function()
+        {
+            var mul=1
+            this.aru.forEach((val)=>{mul=mul*val});
+            return mul;
+
+        }
+    }
+
+     var k=[1,2,32,45,21]
+
+
+     let x= new get(k,23)
+     console.log(x.add());
+     console.log(x.mul());
+
+
+     
+
+    </script>
+</body>
+</html>
