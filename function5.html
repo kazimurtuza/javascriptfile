@@ -102,7 +102,37 @@
 /////////////////////////////////exercise////////////////////////////////////
 
 
-  let
+  let motherfunction=function(callback1,callback2,callback3)
+  {
+      
+    console.log(" mul ="+callback1(13,13));
+    console.log(" div ="+callback2(13,13));
+    console.log(" add ="+callback3(13,13));
+  }
+  let add=function(k,a)
+  { 
+    return k+a;
+  }
+  let div=function(c,d)
+  {
+     
+    return c/d;
+  }
+
+  let mul=function(e,f)
+  {
+   return e*f;
+  }
+  motherfunction(mul,div,add);
+
+//  -----------using arrowfunction-------
+console.log("using arrow funciton")
+
+  let mother =(a,b,c)=>{console.log(" add= "+a(12,12)),console.log("mul= "+b(12,12)),console.log(" div ="+c(12,12))}
+  mother((a,b)=>a+b,(x,y)=>x*y,(u,v)=>u/v);
+
+
+
 
 
 
