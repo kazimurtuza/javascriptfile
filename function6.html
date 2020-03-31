@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+        <!-- rest parameter use in function  -->
+           <!-- rest parameter work like a array  -->
+           <!-- rule we cant define any paramiter after rest parameter -->
+
+        <script>
+
+            let function1=function(a,...rstuse)
+            {
+                document.write("a ="+a+"<br>"+"restparameter contain="+rstuse+"<br>");
+                document.write("a ="+ a +"<br>"+"rstuse[0] ="+ rstuse[0] +"<br>"+"rstuse[1] ="+ rstuse[1] +"<br>"+"rstuse[2] ="+ rstuse[2] +"<br>"+"rstuse[3] ="+ rstuse[3] +"<br>");
+
+                function show(a)
+                {
+                    let x=12;
+                    let y=12;
+                    
+                    console.log("a-----"+a);
+                    console.log("a(x,y)-----"+a(x,y));
+                    return a(x,y);
+
+                }
+              console.log(show(rstuse[3]));
+
+                console.log(rstuse[3]);
+                
+            }
+            function1(1,2,3,"jim",(x,y)=>x+y,6,76,8)
+
+
+
+        </script>
+    
+</body>
+</html>
