@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- ----------------  callback function -----[https://www.youtube.com/watch?v=ec26pgfnYPM] ---->
+    
+
+    <script>
+    
+    // type (1) ----------------  callback function ----- ----
+
+        let show=function(a)
+        {
+            let b="my country is ";
+            document.write(b+a);
+            console.log()
+            return (a+b);
+
+        }
+
+        let kazi=function(callfun)
+        {
+            let name="bangladesh";
+           return callfun(name)
+        }
+
+       console.log(kazi(show));     //here use only [show] not [show()] different 
+                                    //  [show] mins function(a)
+                                    //               {
+                                    //                    let b="my country is ";
+                                    //                    document.write(b+a);
+                                    //                    console.log()
+                                    //                    return (a+b); }
+
+                                    //   [show()] mins call show
+                               
+
+
+
+   // type (2) ---------------  callback function ----- ----
+
+   let display=function(a)           
+   {
+       let b="my salary amount"
+       return a(b);
+    
+   }
+
+ let s= display(function(c){
+       let salary="300000";
+       return c+salary;
+   })
+
+   console.log(s);           
+                            // here display call  function(c) then  
+                            //  display=function(a){
+                            //  b="mysalary amount"
+                            //  a==function(c){   let salary="300000";
+                            //                      return c+salary;  }
+                            //          then we all a(b) }
+                                       
+  
+
+
+
+   // type (3)----- callback function  using arrow function --(most usefull way)---     ******
+
+
+   let view=function(callback) 
+   {
+       let phone="glaxt s1";
+       let price="20000";
+       let id="12345674";
+
+       return callback(phone,price,id);
+      
+   } 
+
+  let vel= view((a,b,c)=>{
+       let v="about phone";
+       return( a+" price "+b+" "+c+" "+v);
+       })       
+ console.log(vel);
+
+// type (4)----- callback function  using arrow function --(asynchronous)---     ******
+
+ setTimeout(function showme(){ console.log("asynchronous function that show after 5 second later");},5000);
+
+
+ console.log("itshow befor asychoronous");
+
+
+
+
+
+
+/////////////////////////////////exercise////////////////////////////////////
+
+
+  let
+
+
+
+
+
+                
+    </script>
+</body>
+</html>
