@@ -34,6 +34,29 @@ document.write(d.salary+"<br>");
   document.write(d.total()+"<br>");
   document.write(d.population+"<br>");
 
+  
+// value change  in a object from out site
+
+let vel ={
+     
+     name:"jim",
+     phone:0,
+     english:0,
+     bangla:0,
+     totalf()
+     {
+       return this.english+this.bangla;
+     }
+
+}
+
+console.log(" name ="+vel.name+" phone="+vel.phone+" english="+vel.english+" bangla="+vel.bangla);
+
+vel.name="kazimurtuza";
+vel.phone=Math.random()*100000000;
+
+console.log(" name ="+vel.name+" phone="+vel.phone+" english="+vel.english+" bangla="+vel.bangla);
+
 
 
 
