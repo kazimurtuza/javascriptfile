@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- recursion function ref[https://www.youtube.com/watch?v=VtG0WAUvq2w&t=432s]-->
+
+    <!-- its have a problem it create stack storage error(Stack overflow) when  use larger then 15000  number so that it is not useable way in programming new ES6 give its solution using [Tail Call Optimization] -->
+    
+    <script>
+          
+        // exmple 1
+        let add=function(n)
+        {
+            var total=0;
+            if(n<=0)
+            {
+                return 0;
+            }
+            else{
+               
+                return n+add(n-1);
+            }
+        }
+        console.log(add(156));    //---- --------->    5+add(4)
+                                               //    5+4+add(3)
+                                               //    5+4+3+add(2)
+                                               //    5+4+3+2+add(1)
+                                               //    5+4+3+2+1+add(0)
+                                               //    5+4+3+2+1+0;   n=0
+       
+     
+
+      
+
+
+
+    </script>
+</body>
+</html>
