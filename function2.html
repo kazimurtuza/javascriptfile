@@ -24,7 +24,7 @@
             }
         }
       //   without call() function use
-      document.write(persion.name({firstname:"kazi",lastnam:"noman"},"indea","pakisthan","coll() method not use"));
+      document.write(persion.name({firstname:"kazi",lastnam:"noman"},"indea","coll() method not use"));
 
      //   with call() function use
       document.write(persion.name.call({firstname:"kazi",lastnam:"noman"},"indea","pakisthan","coll()method use"));
@@ -34,13 +34,14 @@
 
 
 
-    //   ------------------end-----apply() method use in a function-------------------->
+    //   --------------------apply() method use in a function-------------------->
 
                 //   call() and apply() methid are equally same but only different there 
                 //   apply() method send argument as a arry style 
 
     let useapply=function(a,b,c)
     {
+        console.log("apply show  "+this);
         return c+"<br><br>"+this.firstname+"<br>"+this.lastname+"<br>"+a+"<br>"+b+"<br>";
     }
 
@@ -54,7 +55,46 @@
     
     
     
-    //   ------------------end-----apply() method use in a function-------------------->
+    //   ------------------end-----apply() method use in function-------------------->
+
+
+
+    //---------bind() method use in a function----[https://www.youtube.com/watch?v=c0mLRpw-9rI]-->
+
+                            //    bind method different from apply that bind method 
+                            //    provide a function that can use in leter 
+                          
+                            function show(a,b)
+                            {
+                                return (`name = ${this.name} email =${this.email} salary = ${a}  b=${b}`);
+                            }
+           
+                            let obj11={
+                                name:"kazi11",
+                                email:"murtua11@gmail",
+                                id:123,
+                            }
+
+                         console.log("bind provide ="+show.bind(obj11,7));
+
+                         console.log("call provide: "+show.call(obj11,5));
+
+                    // here call provide us return value but bind provide us a funciton  that we can use in later;
+
+                    let usebindleter=show.bind(obj11,9);
+                    
+                 console.log("bind function use leter :"+usebindleter(4));
+                    
+
+                
+
+
+
+
+
+
+
+     // ------------------ end -----bind() method use in a function-------------------->
 
 
     
