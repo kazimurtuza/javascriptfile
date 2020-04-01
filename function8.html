@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+             <!--  factory function -->
+
+         <!-- when a function return a object, we call it a fectory function it can
+             produce object instance without new keyword or class -->
+
+             <script>
+                 function factoryfun(nam,pri)
+                 {
+                     return {
+                         name:nam,
+                         price:pri,
+                         discount:function()
+                         {
+                             return this.price-2000;
+                         }
+                     }
+                 }
+
+                let samsung= factoryfun("samsung",4000);
+
+
+                let lg= factoryfun("lg",7000);
+
+
+                let nokia= factoryfun("nokia",9000);
+
+                document.write(samsung.name + "<br> priced :"+samsung.price+ "<br> after discount :"+samsung.discount()+"<br>");
+
+                document.write(lg.name + "<br> priced :"+lg.price+ "<br> after discount :"+lg.discount()+"<br>");
+
+                document.write(nokia.name + "<br> priced :"+nokia.price+ "<br> after discount :"+nokia.discount()+"<br>");
+
+             </script>
+</body>
+</html>
