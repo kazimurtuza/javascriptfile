@@ -14,6 +14,7 @@
       (4)map,
       (5)sort,
       (5)reduce,
+      (5)concat,***
     */
   let newfile=[];
 
@@ -207,6 +208,25 @@ let testmap4=stuadmission.map(vel=> vel.age)
 
   let slasum=sallary.reduce((total,val)=>total+val,0);//here total inisialize zero and val show as loop
    console.log(slasum);
+
+
+// (5) concat----------------------------------------------------------- ----
+ 
+      //this methid create a new array and add many array in there
+
+let ar1=[1,2,3,4];
+let ar2=['mim','jim','mahadi'];
+let ar3=['rad','sad','dip'];
+
+let newar=ar1.concat(ar2,ar3,ar1);       
+console.log("newarr="+newar);
+console.log("newarr="+newar[4]);
+
+
+
+
+
+
 
 
 
