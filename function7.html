@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+          <!-- Currying function --[https://www.youtube.com/watch?v=oU3LzOO0OGA] -->
+
+          <script>
+
+              function show(a)
+              {
+                  return function add(b)
+                  {
+                      document.write("a="+a+"b="+b);
+                      return a+b;
+                  }
+              }
+
+              let usecurry=show(3);
+              console.log(usecurry);
+              console.log(usecurry(5));
+              console.log(usecurry(6));
+              console.log(usecurry(7));
+
+
+            //   exm2 curry function 
+
+
+            function a(a)
+            {
+              return  function b(b)
+                {
+                  return   function c(c)
+                    {
+                        console.log(a+"b="+b+c) ;
+                        document.write(a);
+
+                    }
+                }
+            }
+  
+             let k=a(10);
+              let j=k(39);
+                 j('zim');
+            // a(10)(12)('kasi');
+
+
+
+
+
+              
+              
+
+
+
+
+          </script>
+    
+</body>
+</html>
