@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!--(1) IIFEs immediately  invoked function expression -[https://www.youtube.com/watch?v=oxLAqN4noA0]-->
+
+        
+ <!--(2) Anonymous Function -[https://www.youtube.com/watch?v=1ve_KUCOq98&t=147s]-->
+
+    <script>
+        // type 1
+             (function()
+             {
+                 let a="bangladesh";
+                 console.log(a);
+             })();
+
+
+        // type 2
+             (function(c,b)
+             {
+                 let a="bangladesh";
+                 console.log(a+" c ="+c);
+             })('jim','mim')
+
+
+
+            //  use this
+
+
+            for(var a=0;a<10;a++)
+            {
+                setTimeout(function(){
+                    console.log(a);
+                },100);                   //it provite 10 time 10 becouse   var                        //    variable is change able and here 
+                                            //    time is set after time complite   
+                                            //    forloop is don it set a=10
+            }
+
+
+
+            for(let a=0;a<10;a++)
+            {
+                setTimeout(function(){
+                    console.log(a);
+                },100);                   
+            } //------------------it provite 0,1,2,3,..10.  becouse let               
+                                      //variable is notchange able and here 
+                                      //it always provide current value
+       
+
+
+
+            for(var a=0;a<10;a++)
+            {
+                (function(i)
+                {setTimeout(function(){
+                    console.log(i);
+                },200)})(a)
+            }
+
+
+
+        //---------------- (2) Anonymous Function----------------------
+
+        let bc=function(b)
+        {
+            console.log(b)
+        }
+        bc("i am Anonymous Function");
+
+
+    </script>
+
+
+</body>
+</html>
