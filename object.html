@@ -57,13 +57,24 @@ vel.phone=Math.random()*100000000;
 
 console.log(" name ="+vel.name+" phone="+vel.phone+" english="+vel.english+" bangla="+vel.bangla);
 
+   
+  //  //////get value in differern way//////
 
+let a={
+            x:12,
+            y:"jim",
+            z:"mim",
+            fun:function(a)
+            {
+              return a;
+            }
+        }
 
+        let{x,y,z,fun}=a;
 
-
-
-
-
+        console.log(x);
+        console.log(y);
+        console.log(fun("rad"));
 
 
 
