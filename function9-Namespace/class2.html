@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+             <!-- getter and setter method use in class  -->
+
+             <script>
+
+                 class Employe{
+                     constructor(nam,ag)
+                     {
+                         this.name=nam;
+                         this.age=ag;
+
+                     }
+
+                     get year()
+                     {
+                         return this.age;
+                     }
+
+//set method use to change property value using this method only can take a parameter
+
+                     set year(newage)
+                     {
+                         if(newage<=50)
+                         {
+                            this.age=newage;
+                         }
+                         else{
+                            this.age="sorry you are not acceptable";
+                         }
+                      
+                     }
+                 }
+
+
+             let val=new Employe("jon",54);
+              console.log(val.year);        //--> here we need not write [val.year()] 
+                                          // becouseof we use get method so this function act like as variable 
+
+
+                  val.year=60;   // it use for set method call and set property alue-
+                 
+                  console.log(val.year);
+
+             </script>
+</body>
+</html>
