@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--------------Prototype Inheritance ------------->
+    <!--------[https://www.youtube.com/watch?v=r4fVgSxt2Ew]------------->
+
+   <!-- [1] here constructor function create 2 object (1) [mobile function] and 
+    [(2) Mobile.prototype] object it associate  with  (3)[ object.prototype]
+    (1)=>(2)=>(3)=>null
+
+   [2] here when we create a new object [let m=new Mobile()] it create a object 
+   [m object]  which is associate with [(2) Mobile.prototype]
+
+   [3]  Mobile.prototype.z=30  this mins it associate with =>[(2) Mobile.prototype] it associate with (3)[ object.prototype]; -->
+
+    <script>
+        function Mobile()
+        {
+            this.a=10;
+        }
+         
+         Mobile.prototype.z=30;
+
+        let m=new Mobile();
+
+        console.log(Mobile.prototype);
+        console.log(Object.getPrototypeOf(m));
+        console.log(Object.getPrototypeOf(Object.getPrototypeOf(m)));
+        console.log(Object.getPrototypeOf(Object.getPrototypeOf(Object.getPrototypeOf(m))));
+        console.log(Object.prototype);
+        console.log("-------------------------")
+        console.log(m.z);
+        console.log(m.a);
+
+        // new we Inheritance Mobile function in  new function about
+
+        function About()
+        {
+            Mobile.call(this),
+            this.b=403,
+            this.c=4773,
+           
+                console.log("this== ------------------"+this);
+            
+            
+        }
+
+            // [1] here also constructor function create 2 object (1) [about function] and 
+    // [(2) about.prototype] object it associate  with  (3)[ object.prototype]
+    // (1)=>(2)=>(3)=>null
+
+    //if we need to Inherit  [Mobile()] this function property to [about()] function  we should link or associate [(2) about.prototype] with [(2) Mobile.prototype]
+
+    //  can we do it using  [Inherit prototipe]
+
+    About.prototype=Object.create(Mobile.prototype)//[Inherit prototipe]
+
+    About.prototype.constructor=About;
+        
+        let about=new About();
+
+
+
+    console.log(about.b)
+    console.log(about.z)
+    console.log(about.a)
+
+
+
+
+    </script>
+    
+</body>
+</html>
