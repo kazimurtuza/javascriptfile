@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- -------Inheritance ---------->
+    <!-- for inheritance one class propertys and method to another class we need to use Extends -->
+
+    <script>
+
+        class father{
+            fmoney(){
+                return "this is father money";
+            }
+        }
+
+        class Mother{
+            mothermoney(){
+                return "this is mother money";
+            }
+        }
+
+        class son extends father{
+            smoney()
+            {
+                return "this is son money";
+            }
+        }
+        class gson extends son{
+            gsmoney()
+            {
+                return "this is gson money";
+            }
+
+        }
+
+        let   obj1=new gson();
+
+        console.log(obj1.fmoney());
+        console.log(obj1.smoney());
+        console.log(obj1.gsmoney());
+
+
+    //    we can extends built-in object such as[ date ,array ,string,etc] theirs parent class alredy create we only need to Inherit them for eccess their property;
+    //example
+
+    class FF extends Date{
+
+    }
+    let a=new FF()
+    console.log(a);
+
+    </script>
+    
+</body>
+</html>
