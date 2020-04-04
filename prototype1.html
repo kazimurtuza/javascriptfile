@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <!-- Prototype Object  -->
+
+        <!-- link [https://www.youtube.com/watch?v=e0qolSoZ1gE] -->
+
+        <!-- in javascript every object associated with another object suppose a={} here this a object associated with a object this object name is [object.prototype ] this object also associate with null -->
+
+    <script>
+        
+        let a=[];
+        let b=new Array();   //here a={} and b=new Array() are same [a===b]
+        console.log(Object.getPrototypeOf(a));   
+
+        //here [Object.getPrototypeOf(a)] this method provide which object is associated with a;
+
+        console.log(Object.getPrototypeOf(b));
+        console.log(Array.prototype);
+
+        // here we can see a and b are associate with a object prototype which name is [Array.prototype]
+
+        let ob={};
+        let ob4=new Object();
+        let ob1=new String();
+        console.log(Object.getPrototypeOf(ob));
+        console.log(Object.getPrototypeOf(ob1));
+        console.log(Object.getPrototypeOf(ob4));
+        console.log(Object.prototype);
+
+        // what is object.prototype's prototype
+
+        console.log(Object.getPrototypeOf(Object.prototype));
+
+        let ob3={a:30};
+
+        function proto(){
+            this.k=300;
+        }
+        proto.prototype.s=30;
+        let ob5=new proto();
+        console.log(ob5.s);
+
+    </script>
+</body>
+</html>
