@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- static method use in class [https://www.youtube.com/watch?v=h4AwVIBsWLo]-->
+
+    <!-- static method advantage we can call static method function without create class object static method have no relation with obj -->
+
+
+    
+    <script>
+        class Mobile{
+        constructor(a,b) 
+        {
+            this.name=a;
+            this.salary=b;
+        };
+
+        mysalary(){
+                return "it is not a static method so here need create obj to call it";
+        }
+
+        static yoursalary(a){
+            return ("this is static function  "+a);
+        }
+
+        }
+
+        var usestaticmethod=Mobile.yoursalary(12); 
+
+        // here we ned not create ---class object to call satatic method function
+        
+        document.write(usestaticmethod +"--- and ---");
+       
+    //    var nostaticmethod=Mobile.mysalary();
+     //     document.write(usestaticmethod);
+
+//  with out static method we can't call this here we need create an object to call it
+   
+   var obj= new Mobile();
+   document.write(obj.mysalary());
+
+
+    </script>
+    
+</body>
+</html>
