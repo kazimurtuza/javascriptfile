@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+         <!---------------- class --------------->
+         <!---------------- [https://www.youtube.com/watch?v=wik23D_gyCo&list=PLVvjrrRCBy2I2eE1e1yOuhts2oTvWesMy] --------------->
+
+         <!------- [https://www.youtube.com/watch?v=XCakvEbEdms&t=214s] ------>
+
+         <!-- generally class and constractor function are same mainly in javascript class is one typeof function that fiture add in ES6 it make constractor function more easy -->
+
+
+    <script>
+
+        class Mobile{
+            constructor(a,b)
+            {   
+                var shopname="kazi brothers";
+                this.name=a;
+                this.price=b;
+                var discount=function(){
+                    return 45897;         
+                    //  it cant access new object becouse its  not  use this
+                };
+                this.discount2=function(){
+                    return "--[var shopname]--"+shopname+"--[this.name]--"+this.name+"--[this.price]--"+this.price;
+                }
+                
+            };
+         
+            details(){
+               return "--[this.name]--"+this.name+"--[this.price]--"+this.price;
+            };
+        }
+
+        var samsung=new Mobile('samsung',40000);
+        var samsung=new Mobile('nokia',300);
+       
+        console.log(samsung.discount2())
+        console.log(samsung.details())
+        // console.log(samsung.discount())
+
+       
+
+
+
+
+
+
+
+//------------- class work we can done by constractor function -----------------------
+
+    let likeclass=function(a,b){
+             var shopname="constractor function shop " ; 
+             
+             this.name=a;
+                this.price=b;
+                this.discount2=function(){
+                    return "--[var shopname]--"+shopname+"--[this.name]--"+this.name+"--[this.price]--"+this.price;
+                }
+
+
+    }
+
+    let samsung2= new likeclass("samsung",200);
+
+    let nokia2= new likeclass("Iphone",3560);
+      console.log(samsung2.name+" "+samsung2.discount2());
+      console.log(nokia2.name+" "+nokia2.discount2());
+      
+
+       
+ 
+    </script>
+    
+</body>
+</html>
