@@ -7,8 +7,9 @@
 </head>
 <body>
     <script>
-
-    //  (1)  globali use this keyword
+// -----------[https://www.youtube.com/watch?v=gvicrj31JOM&t=205s]-------------------
+    
+//  (1)  globali use this keyword
 
         this.name="bangladesh";
         this.house="gaibandha";
@@ -34,7 +35,76 @@
 
         }
         obj1.place();
+
+
+
+        //  this key 
+        // 1 inside a object 
+        // 2 inside a function  
+        // 3 inside a constractor  
+        console.log("-----------------------this key -------------------------");
       
+
+        // [1 inside a object ]
+
+        
+        // when (this) key  use inside an object or method  it reference it its self
+        // [its Object]
+        let obj5={
+            a:"jim",
+            show()
+            {
+                console.log(this);
+            }
+
+        }
+
+        obj5.stop=function()  //here stop is a method of (obj5) objects
+        {
+            console.log(this);
+        }
+
+        obj5.show();
+        obj5.stop();
+
+
+   // [2 inside a function   ]
+
+     // when (this) key  use inside an regular function   it reference  [global(Windo,global])
+   let fun2 =function()
+   {
+       var ab=2203;
+       console.log(this);
+   }
+
+   fun2();
+
+   // [3 inside a constractor  use this]
+
+   // when (this) key  use inside an constractor function    it create a new object 
+  //  and reference this object
+
+   let cons=function()
+   {
+       this.name="kazi";
+       this.school=function()
+       {
+        this.k=666;
+       },
+       classe=function()  //it not add in new function {} becouse this is not use here
+       {
+        this.j=666;
+       }
+       console.log(this);
+   }
+      cons();   //it provide  [global(Windo,global] becouse it act regular function
+
+      let con=new cons();  //{} new object create;
+      
+      //it provide it reference it its self
+        // [its Object] not  [global(Windo,global] becouse it  create empty function  {} then add here this.proprtys  which  behind [this.] not use they not add in this new object;
+
+
        
 
 
