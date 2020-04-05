@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- -------Abstraction  -------->
+    <!-- --[https://www.youtube.com/watch?v=jM0WcyQWMSM]-- -->
+
+    <!-- Abstraction  is a proces that hide code from user, user can't access it from out side. -->
+
+    <script>
+        // here use Abstraction
+
+       function employee(name,age,salary,bonus)
+       {
+           this.name=name;
+           this.age=age;
+           this.salary=salary;
+           this.bonus=bonus,
+           console.log('name = '+this.name+'| age = '+this.age+'| salary = '+this.salary),
+           this.finalsalary=function(){
+                   console.log(this.salary+this.bonus);
+           }
+       }
+
+       let obj=new employee('mim',20,2000,1000);
+     
+       obj.finalsalary();
+       obj.bonus=2000
+       obj.salary=5000
+       obj.finalsalary();
+
+
+    //    here we can change salary and bonus from the out site using [Abstraction]
+  //     we can stop outsite access
+       
+            // here use Abstraction
+
+
+            function myemployee(name,age,salary)
+       {
+           this.name=name;
+           this.age=age;
+           this.salary=salary;
+           let bonus2=1000;
+         
+           let finalsalary=function(){
+                //    console.log(this.salary+this.bonus);
+                   return salary+bonus2 ;
+           }
+           this.show=function(){
+            console.log('name = '+this.name+'| age = '+this.age+'| salary = '+this.salary)
+            console.log('finalsalary ='+finalsalary());
+           }
+       }
+
+       let obj2=new myemployee('mim',20,2000);
+     
+       obj2.salary=5000; //they cant access function from outsite
+       obj2.bonus2=5000; //they cant access function from outsite
+       obj2.show();
+     
+       
+
+
+    </script>
+    
+</body>
+</html>
