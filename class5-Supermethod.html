@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+       <!-- super method use in class -->
+
+       <!-- super method always call parent constructor if we need to use subconstructor we most need to use super method to access it -->
+
+       
+       <script>
+
+           class father{
+           
+
+               fathermoney()
+               {
+            
+                console.log("this is father money "+this.moneyb) ;
+                  
+               }
+           };
+
+           class son extends father{
+            constructor(ab)
+               {
+                super();
+                  this.moneyb=ab;
+                 
+                 
+               }
+           
+            son()  {
+                    console.log("this is son money"+this.moneyb);
+                   }
+           }
+
+           let a=new son(1223);
+           a.son();
+           a.fathermoney();
+
+
+
+        //    ex 2
+
+           class father2{
+           
+           constructor(mn)
+           {
+               this.money=mn;
+
+           }
+
+               fathermoney2()
+               {
+            
+                console.log("this is father money "+this.money) ;
+                  
+               }
+           };
+
+           class son2 extends father2{
+            constructor(ab)
+               {
+                super(ab);
+                  this.moneyb2=ab;
+                 
+                 
+               }
+           
+            son2()  {
+                    console.log("this is son money"+this.moneyb2);
+                   }
+           }
+
+           let a2=new son2(555);
+           a2.son2();
+           a2.fathermoney2();
+          
+
+
+
+
+       </script>
+    
+</body>
+</html>
